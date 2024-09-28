@@ -4,47 +4,51 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="assets/images/favicon.ico" sizes="16x16" />
+  <link rel="icon" href="assets/images/favicon.ico" sizes="16x16 32x32 48x48">
   <link rel="preload" href="assets/images/background.webp" as="image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="index.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <title>Woof Lambo</title>
 </head>
 
 <body>
-  <img class="background" src="assets/images/background.webp" alt="Background Image">
-  <main>
+  <main class="center">
+    <img class="background" src="assets/images/background.webp" alt="Background Image">
     <img class="wooflambo" src="assets/images/WoofLambo.png" alt="Woof Lambo Logo">
-    <img class="wooof" src="assets/images/WOOOF.png" alt="Woof Image">
+    <img class="wooof" src="assets/images/WOOOF.png" alt="WOOOF Logo">
   </main>
   
-  <audio id="background-audio" loop>
+  <audio>
     <source src="assets/images/videoplayback.mp3" type="audio/mp3">
     Your browser does not support the audio element.
   </audio>
   
-  <button id="play-audio" class="audio-button">
-    <i class="fas fa-play"></i> Play Audio
-</button>
-
-
   <footer>
     <div class="input">
       <span id="contract_id">
-        Contract Address Coming Soon!
+        Contract Address Comming Soon!
       </span>
       <svg id="copy_button" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
         <path fill-rule="evenodd" clip-rule="evenodd"
-          d="M4.51339 6.01774C4.51339 5.18686 5.18695 4.5133 6.01783 4.5133H19.5578C20.3887 4.5133 21.0622 5.18686 21.0622 6.01774V7.52218C21.0622 8.35305 21.7358 9.02661 22.5666 9.02661C23.3975 9.02661 24.0711 8.35305 24.0711 7.52218V6.01774C24.0711 3.5251 22.0504 1.50443 19.5578 1.50443H6.01783C3.5252 1.50443 1.50452 3.5251 1.50452 6.01774V19.5577C1.50452 22.0503 3.5252 24.071 6.01783 24.071H7.52227C8.35315 24.071 9.02671 23.3974 9.02671 22.5666C9.02671 21.7357 8.35315 21.0621 7.52227 21.0621H6.01783C5.18695 21.0621 4.51339 20.3886 4.51339 19.5577V6.01774ZM16.5489 12.0355C14.0563 12.0355 12.0356 14.0562 12.0356 16.5488V30.0887C12.0356 32.5814 14.0563 34.6021 16.5489 34.6021H30.0888C32.5815 34.6021 34.6022 32.5814 34.6022 30.0887V16.5488C34.6022 14.0562 32.5815 12.0355 30.0888 12.0355H16.5489ZM15.0445 16.5488C15.0445 15.7179 15.718 15.0444 16.5489 15.0444H30.0888C30.9197 15.0444 31.5933 15.7179 31.5933 16.5488V30.0887C31.5933 30.9196 30.9197 31.5932 30.0888 31.5932H16.5489C15.718 31.5932 15.0445 30.9196 15.0445 30.0887V16.5488Z"
+          d="M4.51339 6.01774C4.51339 5.18686 5.18695 4.5133 6.01783 4.5133H19.5578C20.3887 4.5133 21.0622 5.18686 21.0622 6.01774V7.52218C21.0622 8.35305 21.7358 9.02661 22.5666 9.02661C23.3975 9.02661 24.0711 8.35305 24.0711 7.52218V6.01774C24.0711 3.5251 22.0504 1.50443 19.5578 1.50443H6.01783C3.5252 1.50443 1.50452 3.5251 1.50452 6.01774V19.5577C1.50452 22.0503 3.5252 24.071 6.01783 24.071H7.52227C8.35315 24.071 9.02671 23.3974 9.02671 22.5666C9.02671 21.7357 8.35315 21.0621 7.52227 21.0621H6.01783C5.18695 21.0621 4.51339 20.3886 4.51339 19.5577V6.01774ZM16.5489 12.0355C14.0563 12.0355 12.0356 14.0562 12.0356 16.5488V30.0887C12.0356 32.5814 14.0563 34.6021 16.5489 34.6021H30.0888C32.5815 34.6021 34.6022 32.5814 34.6022 30.0887V16.5488C34.6022 14.0562 32.5815 12.0355 30.0888 12.0355H16.5489ZM15.0445 16.5488C15.0445 15.7179 15.718 15.0444 16.5489 15.0444H30.0888C30.9197 15.0444 31.5933 15.7179 31.5933 16.5488V30.0887C31.5933 30.9196 30.9197 31.5932 30.0888 31.5932H16.5489C 15.718 31.5932 15.0445 30.9196 15.0445 30.0887V16.5488Z"
           fill="white" />
       </svg>
     </div>
     <div class="socials">
-      <a href="https://x.com/Wooflambo"><i class="fab fa-twitter"></i></a>
-      <a href="https://t.me/WoofLambo"><i class="fab fa-telegram"></i></a>
+      <a href="https://x.com/Wooflambo"><svg xmlns="http://www.w3.org/2000/svg" width="72" height="72"
+          viewBox="0 0 72 72" fill="none">
+          <path
+            d="M49.8465 14.3982H57.1757L41.1635 32.6991L60.0006 57.6025H45.2513L33.6992 42.4987L20.4809 57.6025H13.1472L30.2738 38.0276L12.2034 14.3982H27.3271L37.7692 28.2036L49.8465 14.3982ZM47.2742 53.2156H51.3354L25.1203 18.5547H20.7622L47.2742 53.2156Z"
+            fill="white" />
+        </svg></a>
+      <a href="https://t.me/WoofLambo"><svg xmlns="http://www.w3.org/2000/svg" width="72" height="72"
+          viewBox="0 0 72 72" fill="none">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M9.6091 35.2265C23.7019 29.0876 33.0994 25.0405 37.8014 23.0852C51.2266 17.5022 54.0163 16.5324 55.8345 16.5004C56.2344 16.4933 57.1286 16.5924 57.7078 17.0623C58.1969 17.4591 58.3314 17.9951 58.3958 18.3712C58.4602 18.7474 58.5404 19.6044 58.4767 20.274C57.7491 27.9166 54.6012 46.4633 52.9997 55.0232C52.322 58.6452 50.9877 59.8596 49.6959 59.9785C46.8886 60.2368 44.7568 58.1235 42.0378 56.3415C37.783 53.553 35.3793 51.8171 31.2493 49.096C26.4764 45.9513 29.5705 44.223 32.2906 41.3983C33.0024 40.6591 45.3716 29.4105 45.611 28.3901C45.641 28.2624 45.6688 27.7867 45.3861 27.5355C45.1034 27.2843 44.6862 27.3702 44.3852 27.4386C43.9584 27.5354 37.1614 32.0271 23.994 40.9138C22.0647 42.2384 20.3172 42.8837 18.7515 42.8499C17.0254 42.8126 13.7051 41.8742 11.2368 41.072C8.20936 40.088 5.8032 39.5678 6.01272 37.8968C6.12185 37.0265 7.32064 36.1364 9.6091 35.2265Z"
+            fill="white" />
+        </svg></a>
     </div>
   </footer>
 </body>
@@ -59,8 +63,9 @@
     document.body.removeChild(tempInput);
   });
 
-  document.getElementById('play-audio').addEventListener('click', function () {
-    document.getElementById('background-audio').play();
+  window.addEventListener('load', function() {
+    const audio = document.querySelector('audio');
+    audio.play();
   });
 </script>
 

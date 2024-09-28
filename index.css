@@ -1,0 +1,167 @@
+:root {
+    font-size: 16px;
+  
+    color: white;
+    background-color: black;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Fredoka", system-ui;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    overflow: hidden;
+  }
+  
+  body {
+    overflow: hidden;
+    position: relative;
+    min-height: 100svh;
+    display: flex;
+    background: linear-gradient(0deg, #0B0B17 0%, rgba(11, 11, 23, 0.00) 100%);
+  }
+  
+  @keyframes rotateBackground {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+  
+    100% {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+  
+  .background {
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 2514px;
+    height: 2676px;
+    z-index: -1;
+    animation: rotateBackground 10s linear infinite;
+  }
+  
+  .center {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+  
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .wooflambo {
+    width: 326.432px;
+    height: 326.432px;
+  }
+  
+  .wooof {
+    width: 383.855px;
+    height: 313.884px;
+  }
+  
+  footer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-self: flex-end;
+    margin: 0 90px 100px;
+    gap: 32px;
+  }
+  
+  .input {
+    word-break: break-all;
+    width: fit-content;
+    display: inline-flex;
+    padding: 20px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+  
+    border-radius: 90px;
+    background: rgba(255, 255, 255, 0.20);
+    backdrop-filter: blur(12px);
+  
+    color: #FFF;
+    text-align: center;
+    font-family: Fredoka;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+  
+    &>svg {
+      cursor: pointer;
+    }
+  }
+  
+  .socials {
+    align-self: center;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  
+    &>a {
+      padding: 10px;
+      border-radius: 50px;
+      background: rgba(255, 255, 255, 0.20);
+      backdrop-filter: blur(12px);
+      text-decoration: none;
+      color: #FFF;
+    }
+  }
+  
+  @media (max-width: 1000px) {
+    .wooflambo {
+      width: 50%;
+      height: 50%;
+    }
+  
+    .wooof {
+      width: 50%;
+      height: 50%;
+    }
+  
+    footer {
+      flex-direction: column;
+      margin: 0 10px 30px;
+    }
+  }
+  
+  @media (max-width: 700px) {
+    .wooflambo {
+      width: 131.67px;
+      height: 131.67px;
+    }
+  
+    .wooof {
+      width: 155.184px;
+      height: 126.896px;
+    }
+  
+    .input {
+      width: 100%;
+      font-size: 20px;
+  
+      &>span {
+        flex: 1;
+      }
+    }
+  
+    .socials {
+      &>a {
+        &>svg {
+          width: 48px;
+          height: 48px;
+        }
+      }
+    }
+  }

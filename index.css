@@ -1,6 +1,6 @@
 :root {
   font-size: 16px;
-
+  
   color: white;
   background-color: black;
 }
@@ -20,18 +20,18 @@ html {
 body {
   overflow: hidden;
   position: relative;
-  min-height: 100vh; /* kept this */
+  min-height: 100vh;
   display: flex;
   background: linear-gradient(0deg, #0B0B17 0%, rgba(11, 11, 23, 0.00) 100%);
 }
 
 @keyframes rotateBackground {
   0% {
-      transform: translate(-50%, -50%) rotate(0deg);
+    transform: translate(-50%, -50%) rotate(0deg);
   }
 
   100% {
-      transform: translate(-50%, -50%) rotate(360deg);
+    transform: translate(-50%, -50%) rotate(360deg);
   }
 }
 
@@ -47,58 +47,15 @@ body {
   animation: rotateBackground 10s linear infinite;
 }
 
-main {
+.center {
   display: flex;
   align-items: center;
   gap: 50px;
+
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
-
-.audio-button {
-    background-color: #ff4081; /* Button color */
-    color: white; /* Text color */
-    border: none; /* No border */
-    border-radius: 50px; /* Rounded corners */
-    padding: 10px 20px; /* Padding */
-    font-size: 18px; /* Font size */
-    cursor: pointer; /* Pointer on hover */
-    display: flex; /* Flexbox for alignment */
-    align-items: center; /* Center the icon and text */
-    transition: background-color 0.3s ease; /* Smooth background color transition */
-    outline: none; /* Remove outline */
-}
-
-.audio-button i {
-    margin-right: 8px; /* Space between icon and text */
-}
-
-.audio-button:hover {
-    background-color: #e91e63; /* Darker color on hover */
-}
-.audio-button {
-  background-color: #ff4081; /* Button color */
-  color: white; /* Text color */
-  border: none; /* No border */
-  border-radius: 25px; /* Rounded corners */
-  padding: 3px 8px; /* Smaller padding */
-  font-size: 12px; /* Smaller font size */
-  cursor: pointer; /* Pointer on hover */
-  display: flex; /* Flexbox for alignment */
-  align-items: center; /* Center the icon and text */
-  transition: background-color 0.3s ease; /* Smooth background color transition */
-  outline: none; /* Remove outline */
-  margin-top: 10px; /* Add some space above the button */
-}
-
-.audio-button i {
-  margin-right: 4px; /* Space between icon and text */
-}
-
-.audio-button:hover {
-  background-color: #e91e63; /* Darker color on hover */
 }
 
 .wooflambo {
@@ -141,8 +98,10 @@ footer {
   font-weight: 400;
   line-height: 140%;
 
-  & > svg {
-      cursor: pointer;
+  &>svg {
+    cursor: pointer;
+    width: 44px;
+    height: 44px;
   }
 }
 
@@ -152,26 +111,64 @@ footer {
   align-items: center;
   gap: 40px;
 
-  & > a {
-      padding: 20px; /* Increased padding for larger clickable area */
-      border-radius: 50px;
-      background: rgba(255, 255, 255, 0.20);
-      backdrop-filter: blur(12px);
-      text-decoration: none;
-      color: #FFF;
-      min-width: 44px; /* Minimum touch target size */
-      min-height: 44px; /* Minimum touch target size */
+  &>a {
+    padding: 10px;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.20);
+    backdrop-filter: blur(12px);
+    text-decoration: none;
+    color: #FFF;
+
+    &>svg {
+      width: 44px;
+      height: 44px;
+    }
   }
 }
 
 @media (max-width: 1000px) {
   .wooflambo {
-      width: 50%;
-      height: auto;
+    width: 50%;
+    height: 50%;
   }
 
   .wooof {
-      width: 50%;
-      height: auto;
+    width: 50%;
+    height: 50%;
+  }
+
+  footer {
+    flex-direction: column;
+    margin: 0 10px 30px;
+  }
+}
+
+@media (max-width: 700px) {
+  .wooflambo {
+    width: 131.67px;
+    height: 131.67px;
+  }
+
+  .wooof {
+    width: 155.184px;
+    height: 126.896px;
+  }
+
+  .input {
+    width: 100%;
+    font-size: 20px;
+
+    &>span {
+      flex: 1;
+    }
+  }
+
+  .socials {
+    &>a {
+      &>svg {
+        width: 48px;
+        height: 48px;
+      }
+    }
   }
 }
